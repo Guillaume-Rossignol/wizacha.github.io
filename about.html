@@ -30,13 +30,19 @@ order: 15
         <h3>{{member[1].name_full}}
             <small>{{ member[1].job}}</small>
         </h3>
-        <p>{{ member[1].skill}}</p>
+        <dl class="dl-horizontal">
+            <dt>Spécialité</dt>
+            <dd class="text-left">{{member[1].skill}}</dd>
+
+            <dt>Citation</dt>
+            <dd class="text-left"><q>{{member[1].quote}}</q></dd>
+        </dl>
+        {% if member[1].twitter %}
         <p>
             <a href="https://twitter.com/{{member[1].twitter}}" class="twitter-follow-button" data-show-count="false" data-size="large">Suivre {{@member[1].twitter}}</a>
         </p>
+        {% endif %}
     </div>
     {% endfor %}
 
 </div>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

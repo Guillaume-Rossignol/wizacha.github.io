@@ -7,7 +7,7 @@ order: 5
 {% for post in site.posts %}
     {% assign curr_date = post.date | date: "%b %Y" %}
     {%assign author = site.data.team[post.author] %}
-    {% if curr_date != prev_date %}{% assign prev_date = curr_date %}
+    {% if curr_date != prev_date %}{% assign prev_date = curr_date %}kj
         {% assign curr_id = post.date | date: "%m_%Y" %}
         {% capture menu %}{{ menu }}<li><a href="#{{ curr_id }}">{% include date_fr.html date=curr_date %}</a></li>{% endcapture %}
         {% capture list %}{{ list }}
@@ -31,7 +31,9 @@ order: 5
                 {% endfor %}
             </p>
             <hr>
-            <img class="img-responsive" src="/images/{{post.banner}}" alt="{{post.title}}">
+            <a href="{{ post.url }}">
+                <img class="img-responsive" src="/images/{{post.banner}}" alt="{{post.title}}">
+            </a>
             <hr>
             <p>{{ post.excerpt }}</p>
             <a class="btn btn-primary" href="{{ post.url }}">Lire <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -66,6 +68,11 @@ order: 5
                 </div>
             </div>
             <!-- /.row -->
+        </div>
+
+        <div class="well">
+            <h4>Tweets</h4>
+            <a class="twitter-timeline"  href="https://twitter.com/b_viguier/lists/wizacha-tech-side"  data-widget-id="505801266404933632">Tweets de https://twitter.com/b_viguier/lists/wizacha-tech-side</a>
         </div>
 
     </div>
