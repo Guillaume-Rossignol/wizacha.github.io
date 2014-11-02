@@ -1,0 +1,46 @@
+footer {
+    margin: 40px 0;
+    padding: 20px 0;
+    border-top: 1px solid;
+}
+
+.post_footer {
+    margin: 40px
+}
+
+.img-center {
+    margin: 0 auto;
+    height: 200px;
+}
+
+dl.hipchat {
+    background : url("/images/logo-hipchat.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+dl.hipchat dt {
+    background: #EEE;
+    text-shadow: #FFF 1px 1px;
+    padding: 10px 10px 10px 0;    
+}
+
+dl.hipchat dd {
+      padding: 10px;
+}
+
+h2 .timer, h3 .timer{
+    display: inline-block;
+    vertical-align: top;
+}
+
+h2 .jenkins, h3 .jenkins{
+    display: inline-block;
+    width: 80%;
+    background-image : url("/images/logo-jenkins.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding: 0 0 5px 30px;
+    text-align:justify;
+}

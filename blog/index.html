@@ -7,7 +7,7 @@ order: 5
 {% for post in site.posts %}
     {% assign curr_date = post.date | date: "%b %Y" %}
     {%assign author = site.data.team[post.author] %}
-    {% if curr_date != prev_date %}{% assign prev_date = curr_date %}
+    {% if curr_date != prev_date %}{% assign prev_date = curr_date %}kj
         {% assign curr_id = post.date | date: "%m_%Y" %}
         {% capture menu %}{{ menu }}<li><a href="#{{ curr_id }}">{% include date_fr.html date=curr_date %}</a></li>{% endcapture %}
         {% capture list %}{{ list }}
